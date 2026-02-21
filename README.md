@@ -7,3 +7,4 @@ querySelector() returns the first matching element using any CSS selector, where
 Create an element using document.createElement(), set its content or attributes, and insert it into the DOM using methods like appendChild() or append().
 
 3.What is Event Bubbling? And how does it work?
+Event Bubbling is a DOM event mechanism where an event starts from the target element and then propagates upward through its parent elements until it reaches the root.

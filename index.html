@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Tracker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <header class="bg-white border-b sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+            <h1 class="text-xl font-bold text-blue-600">Job Application Tracker</h1>
+            <br>
+            <div class="flex gap-4">
+                <div class="text-sm bg-blue-50 px-3 py-1 rounded-full text-blue-700">Total: <span id="total-stat">8</span></div>
+                <div class="text-sm bg-orange-50 px-3 py-1 rounded-full text-orange-700">Interview: <span id="interview-stat">0</span></div>
+                <div class="text-sm bg-red-50 px-3 py-1 rounded-full text-red-700">Rejected: <span id="rejected-stat">0</span></div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-8">
+        <div class="flex flex-col md:flex-row md:items-center justify-between mb-6 gap-4">
+            <div>
+                <h2 class="text-2xl font-bold">Available Jobs</h2>
+                <div class="mt-4 flex gap-2 border-b">
+                    <button onclick="switchTab('all')" id="tab-all" class="px-4 py-2 border-b-2 border-blue-600 text-blue-600 font-medium">All Jobs</button>
+                    <button onclick="switchTab('interview')" id="tab-interview" class="px-4 py-2 text-gray-500 hover:text-blue-600">Interview</button>
+                    <button onclick="switchTab('rejected')" id="tab-rejected" class="px-4 py-2 text-gray-500 hover:text-blue-600">Rejected</button>
+                </div>
+            </div>
+            <div class="text-right">
+                <span class="text-gray-500">Showing:</span>
+                <span id="current-count" class="font-bold text-lg ml-1">8</span>
+            </div>
+        </div>
+
+        <div id="jobs-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            </div>
+
+        <div id="empty-state" class="hidden flex-col items-center justify-center py-20 text-center">
+            <i class="fa-solid fa-folder-open text-6xl text-gray-200 mb-4"></i>
+            <h3 class="text-xl font-semibold text-gray-600">No Jobs Available</h3>
+            <p class="text-gray-400">Try changing your filters or applying for more roles.</p>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

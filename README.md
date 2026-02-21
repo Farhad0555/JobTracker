@@ -8,3 +8,8 @@ Create an element using document.createElement(), set its content or attributes,
 
 3.What is Event Bubbling? And how does it work?
 Event Bubbling is a DOM event mechanism where an event starts from the target element and then propagates upward through its parent elements until it reaches the root.
+
+4.What is Event Delegation in JavaScript? Why is it useful?
+Event Delegation is a technique where a parent element handles events for its child elements using event bubbling, and it is useful because it improves performance and works for dynamically added elements.
+5.What is the difference between preventDefault() and stopPropagation() methods?
+preventDefault() stops the browser’s default action for an event, while stopPropagation() prevents the event from bubbling or capturing to parent elements.
